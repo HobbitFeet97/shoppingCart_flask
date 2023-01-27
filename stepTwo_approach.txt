@@ -1,0 +1,5 @@
+2) User should be able to log in and log out at will
+    a) Create a nav bar with Home and Log Out button
+    b) If a user clicks Log Out, pop the email from the session
+    c) They should be redirected to the Log In page
+    

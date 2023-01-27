@@ -1,0 +1,44 @@
+{% extends 'shoppingCart_base.html'%}
+{% block title%}Mens{% endblock%}
+{% block content%}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/styles/product.css')}}"/>
+<form action='#' method="post">
+    <header>
+        <nav>
+            <ul class="navcomp">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/men">Mens</a></li>
+                <li><a href="/women">Womens</a></li>
+                <li><a href="/accessory">Accessories</a></li>
+                <li><a href="/shoe">Shoes</a></li>
+            </ul>
+        </nav>
+        <div class="actionButtons">
+            <button class='basket' type="submit" name="action" value="basket">Basket ({{baskets}})</button>
+            <button class='logout' type="submit" name="action" value="logout">Logout</button>
+        </div>
+    </header>
+    <main>
+        <div class="glass">
+            {% for product in products%}
+                <form action='#' method="post"></form>
+                    <div class='product'>
+                    <img src="{{url_for('static', filename='images/'+product['imgLocation'])}}">
+                    <div class='productInfo'>
+                        <p class='productName'>{{product['name']}}</p>
+                        <p>£{{product['price']}}</p>
+                        <label for="quantity">Quantity:</label>
+                        <select name="quantity{{product['id']}}">
+                            {% for number in range(product['stockQuantity'])%}
+                            <option value="{{number}}">{{number}}</option>
+                            {% endfor%}
+                        </select>
+                    </div>
+                    <button type="submit" name="addedProduct" value="{{product['id']}}">Add to Basket</button>
+                </div>          
+            </form>
+            {% endfor%}
+        </div>
+    </main>
+</form>
+{% endblock%}

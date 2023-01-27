@@ -1,0 +1,58 @@
+{% extends 'shoppingCart_base.html'%}
+{% block title%}Home{% endblock%}
+{% block content%}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/styles/home.css')}}"/>
+<form action='#' method="post">
+    <header>
+        <nav>
+            <ul class="navcomp">
+                <li><a href="#">Home</a></li>
+                <li><a href="/men">Mens</a></li>
+                <li><a href="/women">Womens</a></li>
+                <li><a href="/accessory">Accessories</a></li>
+                <li><a href="/shoe">Shoes</a></li>
+            </ul>
+        </nav>
+        <div class="actionButtons">
+            <button class='basket' type="submit" name="action" value="basket">Basket ({{baskets}})</button>
+            <button class='logout' type="submit" name="action" value="logout">Logout</button>
+        </div>
+    </header>
+    <main>
+        <div class='glass'>
+            <div class='personalinfo'>
+                <h1 class="title">Profile</h1>
+                <div class="infolist">
+                    <p>{{firstname + ' ' + lastname if firstname and lastname}}</p>
+                    <p>{{email if email}}</p>
+                </div>
+                <a href="#" class='update'>Update Info</a>
+            </div>
+            <div class='recentorders'>
+                <h2 class="ordertitle">Recent Orders</h2>
+                <div class='order'>
+                    <p>Product image</p>
+                    <div class='productinfo'>
+                        <p>Product name</p>
+                        <p>Order date</p>
+                    </div>
+                </div>
+                <div class='order'>
+                    <p>Product image</p>
+                    <div class='productinfo'>
+                        <p>Product name</p>
+                        <p>Order date</p>
+                    </div>
+                </div>
+                <div class='order'>
+                    <p>Product image</p>
+                    <div class='productinfo'>
+                        <p>Product name</p>
+                        <p>Order date</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</form>
+{% endblock%}

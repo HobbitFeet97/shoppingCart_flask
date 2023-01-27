@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*No hyper link styling*/
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/*---Nav bar---*/
+header{
+    top: 0;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgb(32, 32, 32);
+    font-size: large;
+}
+
+.actionButtons{
+    top: 0;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgb(32, 32, 32);
+    font-size: large;
+}
+
+.basket{
+    margin-right: 2%;
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    background: none;
+    font-size: large;
+}
+
+.logout{
+    margin-right: 2%;
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    background: none;
+    font-size: large;
+}
+
+.logout:hover{
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.basket:hover{
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.navcomp{
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    background: none;
+}
+
+.navcomp ul{
+    list-style: none;
+}
+
+.navcomp li{
+    display: inline;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+li:hover{
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+/*---Website content---*/
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(32, 32, 32);
+    min-height: 100vh;
+    color: rgb(32, 32, 32);
+}
+
+.glass{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.6);
+    min-height: 80vh;
+    min-width: 80%;
+    border-radius: 5%;
+}
+
+.product{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-width: 80%;
+    border-radius: 5%;
+    padding: 4px;
+}
+
+.product img{
+    border-radius: 5%;
+}
+
+.productName{
+    font-weight: 900;
+    font-size: x-large;
+    padding: 2px;
+}
+
+button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    background: rgb(32, 32, 32);
+    color: white;
+    font-size: large;
+}
+
+button:hover{
+    cursor: pointer;
+  background: white;
+  color: rgb(32, 32, 32);
+  transition: all 0.3s ease 0s;
+}

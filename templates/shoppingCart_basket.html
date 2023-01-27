@@ -1,0 +1,13 @@
+{% extends 'shoppingCart_base.html'%}
+{% block title%}Basket{% endblock%}
+{% block content%}
+<main>
+    <div class="glass">
+        {% for product in products%}
+        <div class="product">
+            <img src="{{url_for('static', filename='images/'+product.product['imgLocation'])}}">
+        </div>
+        {% endfor%}
+    </div>
+</main>
+{% endblock%}

@@ -1,0 +1,10 @@
+The purpose of this project is to build a shopping cart web application using flask
+User experience:
+1) Allow the user to create a unique account
+2) User should be able to log in and log out at will
+3) User can delete their account
+4) Should a user register, they should be prompted to fill in required information e.g. First/Last name, DOB, Address
+5) Once logged in, a user can select products to add to their cart
+6) User can add and remove products from their cart
+7) User can check-out
+8) Once checked out, a users cart is emptied and their products are moved to a separate storage place

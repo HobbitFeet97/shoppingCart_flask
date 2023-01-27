@@ -1,0 +1,7 @@
+1) Allow the user to create a unique account
+  a) Create a data-base table to store associated information about a user - using MySQL sqlite
+  b) Create a flask webApp which renders a registration page and captures the users email and password
+  c) Persist this information to the DB once a user submits the form
+  d) Query DB, should an active email already exist, prompt user to use a different email
+  e) Create a front end using HTML and CSS to display to the user
+  f) Once the form is successfully submitted, redirect the user to their placeholder home page

@@ -1,0 +1,33 @@
+{% extends 'shoppingCart_base.html'%}
+{% block title%}Login{% endblock%}
+{% block content%}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/styles/login.css')}}"/>
+<main>
+<form action="#" method="post" class="">
+    <div class="glass">
+        <h1 class="head">Login</h1>
+        <div class="input">
+            <div class="email">
+                <label>Email:
+                    <input type="email" name="email" value="{{email if email}}" required autofocus>
+                </label>
+            </div>
+        {% with messages = get_flashed_messages()%}
+             {% if messages%}
+                {% for m in messages%}
+                    <p class="warning">{{m}}</p>
+                {% endfor%}
+            {% endif%}
+        {% endwith%}
+            <div class="password">
+                <label>Password: <input type="password" name="password" required autofocus/></label>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="login" name="action" value="Login" type="submit">Login</button><br>
+            <button class="register" name="action" value="Register" type="submit">Register</button>
+        </div>
+    </div>
+</form>
+</main>
+{% endblock%}
